@@ -19,7 +19,14 @@
         </p>
         <!-- Exercise 3 -->
         <!-- Do the same as in Exercises 1 & 2, now with Computed Properties -->
-
+        <hr />
+        <h2>Exercise 3</h2>
+        <p>
+          {{ computeReverse }}
+        </p>
+        <p>
+          {{ computeCountandAppend }}
+        </p>
         <!-- Exercise 4 -->
         <!-- Share the Computed Property rebuilding Exercise 2 via a Mixin -->
       </div>
@@ -28,6 +35,7 @@
 </template>
 
 <script>
+import { exerciseMixin } from "./exerciseMixin";
 export default {
   filters: {
     reverseString(text) {
@@ -46,6 +54,7 @@ export default {
       return joinArray; // "olleh"
     }
   },
+  mixins: [exerciseMixin],
   data() {
     return {
       text: "Hello"
